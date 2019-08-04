@@ -1,3 +1,0 @@
-D:\Python_Project\Pyqt5\logs\logs_20190722230722.txt
-登录成功
-登录失败，请检查用户、密码

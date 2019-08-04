@@ -4,7 +4,7 @@
 import threading
 from time import sleep
 
-from logs import log, get_log_path
+from login.logs import log, get_log_path
 
 exitFlag = 0
 

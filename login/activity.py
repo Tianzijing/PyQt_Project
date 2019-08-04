@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 
-from login import Ui_MainWindow
-from logs import log, file_path
+from login.login import Ui_MainWindow
+from login.logs import log, file_path
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -27,9 +27,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def print_logs(self):
         # print("重新读取文件({}秒)：".format(n))
-        print "清空输出"
+        print("清空输出")
         self.log_text.clear()
         for line in open(file_path):
-            print "打印输出"
+            print("打印输出")
             # print line,  #python2 用法
             self.log_text.append(line[:-1])

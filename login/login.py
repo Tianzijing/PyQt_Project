@@ -7,7 +7,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -72,4 +73,3 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "密码："))
         self.id_pswd.setPlaceholderText(_translate("MainWindow", "请输入密码"))
         self.login_Button.setText(_translate("MainWindow", "登录"))
-

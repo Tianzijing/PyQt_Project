@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/20190804-PyQt5_Project.iml" filepath="$PROJECT_DIR$/.idea/20190804-PyQt5_Project.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Pyqt5.iml" filepath="$PROJECT_DIR$/.idea/Pyqt5.iml" />
->>>>>>> f4a0fb8a7e8c5f55938426975dc68a52c5826b77
     </modules>
   </component>
 </project>

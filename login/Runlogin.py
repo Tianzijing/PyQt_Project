@@ -3,7 +3,7 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from activity import MainWindow
+from login.activity import MainWindow
 
 
 def show_MainWindow():

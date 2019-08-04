@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 import sys
-import threading
-from time import sleep
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import QTimer, QThread, pyqtSignal
 
-from activity import MainWindow
+from login.activity import MainWindow
 
 # class WorkThread(QThread):
 #     trigger = pyqtSignal()

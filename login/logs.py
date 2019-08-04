@@ -20,7 +20,10 @@ def get_log_path(file_path, name_path):
     # 生成日志文件的名字
     log_name = name_list.pop() + "_" + time.strftime("%Y%m%d%H%M%S") + ".txt"
     # 定义临时变量，用于存放日志相对目录路径
-    tmp = "logs\\"
+    os_name = "\\"
+    if os.name == 'posix':
+        os_name = "/"
+    tmp = "logs" + os_name
     # 循环进行日志目录的拼接
     for name in name_list:
         tmp = tmp + name + "\\"
