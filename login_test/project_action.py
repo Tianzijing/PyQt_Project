@@ -31,6 +31,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         print("清空输出")
         self.login_log.clear()
         for line in open(file_path):
+            line = line.rstrip()
             print("打印输出：{}".format(line))
-            # print line
-            self.login_log.append(line.rstrip())
+            self.login_log.append(line)
