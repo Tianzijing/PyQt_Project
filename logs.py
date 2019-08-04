@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import time
 
@@ -41,12 +42,12 @@ def get_log_path(file_path, name_path):
     return log_path
 
 
-def print_log(file_path, comment, mode='a+', encoding="utf-8"):
-    # 第一句输出到consle：
-    print(comment)
-    # 第二句输出到txt："{} 方法第{}次开始执行~~~".format(func.__name__, i+1)
-    with open(file=file_path, mode=mode, encoding=encoding) as f:
-        print("P\t", comment, file=f)
+# def print_log(file_path, comment, mode='a+', encoding="utf-8"):
+#     # 第一句输出到consle：
+#     print(comment)
+#     # 第二句输出到txt："{} 方法第{}次开始执行~~~".format(func.__name__, i+1)
+#     with open(file=file_path, mode=mode, encoding=encoding) as f:
+#         print("P\t", comment, file=f)
 
 
 def log(file_path, msg, mode='a+', encoding="utf-8"):
@@ -62,3 +63,5 @@ def log(file_path, msg, mode='a+', encoding="utf-8"):
     fp.write("\n")
     # 写完关闭
     fp.close()
+
+file_path = get_log_path(__file__, __name__)
