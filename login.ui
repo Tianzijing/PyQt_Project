@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1712</width>
+    <height>1256</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>90</y>
-      <width>258</width>
-      <height>305</height>
+      <x>550</x>
+      <y>260</y>
+      <width>651</width>
+      <height>701</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -89,8 +89,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>1712</width>
+     <height>30</height>
     </rect>
    </property>
   </widget>

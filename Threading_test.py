@@ -16,9 +16,10 @@ class myThread_1(threading.Thread):  # 继承父类threading.Thread
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.time = time
+        self.tp = test_ptiny()
 
     def run(self):  # 把要执行的代码写到run函数里面 线程在创建后会直接运行run函数
-        tp.__init__(self.time)
+        self.tp.print_time(self.time)
 
 
 class myThread_2(threading.Thread):  # 继承父类threading.Thread
@@ -26,15 +27,15 @@ class myThread_2(threading.Thread):  # 继承父类threading.Thread
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.time = time
+        self.tp = test_ptiny()
 
     def run(self):  # 把要执行的代码写到run函数里面 线程在创建后会直接运行run函数
-        tp.log_print(self.time)
+        self.tp.log_print(self.time)
 
 
 class test_ptiny():
 
-    # def print_time(self, time):
-    def __init__(self, time):
+    def print_time(self, time):
         n = 0
         for i in range(400):
             sleep(time)
@@ -51,7 +52,7 @@ class test_ptiny():
                 # print line,  #python2 用法
                 print(line[:-1])
 
-tp = test_ptiny(5)
+
 t1 = myThread_1('T1', 5)
 t2 = myThread_2('T2', 8)
 t1.start()

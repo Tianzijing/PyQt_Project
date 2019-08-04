@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import time
 
@@ -9,7 +10,7 @@ def get_log_path(file_path, name_path):
     #     print(file_path) #Z:\VM\Scripts\workspace_py\SuperClass05\demo\decorator_demo.py
     #     print(name_path) #demo.decorator_demo
     # 先处理模块名，用反斜杠替换掉.
-    tmp_path = name_path.replace(".", "//")
+    tmp_path = name_path.replace(".", "\\")
     # 根据替换后操作找到在文件路径中所在的位置，以此得到项目的路径
     pos = file_path.find(tmp_path)
     # 截取得到项目路径
@@ -19,10 +20,10 @@ def get_log_path(file_path, name_path):
     # 生成日志文件的名字
     log_name = name_list.pop() + "_" + time.strftime("%Y%m%d%H%M%S") + ".txt"
     # 定义临时变量，用于存放日志相对目录路径
-    tmp = "logs//"
+    tmp = "logs\\"
     # 循环进行日志目录的拼接
     for name in name_list:
-        tmp = tmp + name + "//"
+        tmp = tmp + name + "\\"
     # 得到日志目录的全路径
     log_dir = project_path + tmp
     # 如果日志目录不存在则新建
@@ -38,14 +39,14 @@ def get_log_path(file_path, name_path):
     return log_path
 
 
-def print_log(file_path, comment):
-    # 第一句输出到consle：
-    print(comment)
-    # 第二句输出到txt："{} 方法第{}次开始执行~~~".format(func.__name__, i+1)
-    with open(file_path, "a+") as f:
-        print("|======================================================", file=f)
-        print("|  ", comment, file=f)
-        print("|======================================================", file=f)
+# def print_log(file_path, comment):
+#     # 第一句输出到consle：
+#     print(comment)
+#     # 第二句输出到txt："{} 方法第{}次开始执行~~~".format(func.__name__, i+1)
+#     with open(file_path, "a+") as f:
+#         print("|======================================================", file=f)
+#         print("|  ", comment, file=f)
+#         print("|======================================================", file=f)
 
 # log(file_path, msg, mode='a+', encoding="utf-8"):
 
@@ -56,10 +57,13 @@ def log(file_path, msg, mode='a+', encoding="utf-8"):
     '''
     # print(msg)
     # 打开日志文件
-    fp = open(file=file_path, mode=mode, encoding=encoding)
+    # fp = open(file=file_path, mode=mode, encoding=encoding)
+    fp = open(file_path, mode=mode)
     # 进行写入操作
     fp.write(msg)
     # 换行
     fp.write("\n")
     # 写完关闭
     fp.close()
+
+file_path = get_log_path(__file__, __name__)
