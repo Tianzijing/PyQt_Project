@@ -69,13 +69,6 @@
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="login_Button">
-         <property name="text">
-          <string>登录</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QTextBrowser" name="login_log"/>
        </item>
       </layout>

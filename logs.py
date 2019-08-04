@@ -6,9 +6,6 @@ def get_log_path(file_path, name_path):
     '''
             此方法用于得到日志文件的路径
     '''
-    os_name = "\\"
-    if os.name == "posix":
-        os_name = '/'
     # print(file_path) #Z:\VM\Scripts\workspace_py\SuperClass05\demo\decorator_demo.py
     # print(name_path) #demo.decorator_demo
     # 先处理模块名，用反斜杠替换掉.
@@ -22,6 +19,9 @@ def get_log_path(file_path, name_path):
     # 生成日志文件的名字
     log_name = name_list.pop() + "_" + time.strftime("%Y%m%d%H%M%S") + ".log"
     # 定义临时变量，用于存放日志相对目录路径
+    os_name = "\\"
+    if os.name == "posix":
+        os_name = '/'
     tmp = "logs" + os_name
     # 循环进行日志目录的拼接
     for name in name_list:
@@ -62,6 +62,3 @@ def log(file_path, msg, mode='a+', encoding="utf-8"):
     fp.write("\n")
     # 写完关闭
     fp.close()
-
-
-file_path = get_log_path(__file__, __name__)
